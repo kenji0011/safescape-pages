@@ -1,49 +1,84 @@
-# Berong SafeEscape - GitHub Pages Website
+# SafeScape V2 — Project Showcase Website
 
-This repository contains the project showcase website for **Berong SafeEscape**, structured according to the research showcase requirements:
+Official GitHub Pages project website and research showcase for **SafeScape V2: An AI-Driven Responsive Web Portal For Fire Safety Information Dissemination**, developed in collaboration with the **Bureau of Fire Protection (BFP) – Sta. Cruz, Laguna**.
 
-- [x] **Research title**: Featured in the hero header.
-- [x] **Team members and adviser**: Detailed contributor and adviser cards with contact details.
-- [x] **Problem statement and objectives**: Structured context and bulleted objectives.
-- [x] **Methodology**: 4-phase system architecture and workflow.
-- [x] **System features and screenshots**: Descriptive module highlights with mockup viewports.
-- [x] **Links**: Direct access cards for the live system, repository, and documentation.
+Submitted in partial fulfillment of the requirements for the degree of **Bachelor of Science in Computer Science (Major in Intelligent Systems)** at the **College of Computer Studies, Laguna State Polytechnic University (LSPU), Santa Cruz Main Campus**.
+
+---
+
+## Defense Rubric & Showcase Checklist
+
+- [x] **Research Title**: *SafeScape V2: An AI-Driven Responsive Web Portal For Fire Safety Information Dissemination*
+- [x] **Team Members & Adviser**:
+  - **Justin Angelo A. Luzande** — Researcher
+  - **Kean Gabriel E. Salvahan** — Researcher
+  - **Prince Genel R. Umali** — Researcher
+  - **Mia V. Villarica, DIT** — Thesis Adviser & Associate Dean, CCS
+- [x] **Problem Statement & Objectives**: Verbatim alignment with Chapter I (Sections 1.1 & 1.2) of the thesis manuscript, addressing 5 core research questions and 5 specific objectives.
+- [x] **Methodology**: Developmental Research Design (R&D) guided by Design Science Research Methodology (DSRM) and an Agile 6-phase Iterative & Incremental Development Model, validated by 75 external evaluators (10 IT Experts on ISO/IEC 25010:2023, 15 BFP Personnel, 50 Community End-Users) and 85 researcher test cases (100% pass rate).
+- [x] **System Features & Screenshots**: 4 high-resolution screenshots in zigzag order with an interactive click-to-zoom lightbox modal:
+  1. `login_berong.png` — Secure Authentication & Multi-Role Onboarding
+  2. `kids_berong.png` — Gamified Kids Learning Hub & Mascot Drills
+  3. `adults_berong.png` — Comprehensive Fire Prevention & Household Protocols
+  4. `pro_berong.png` — Professional Fire Safety Compliance & Adaptive Assessment
+- [x] **Project Links**:
+  - **Live Application**: [https://bfpscberong.app](https://bfpscberong.app)
+  - **Source Code Repository**: [https://github.com/kenji0011/berong-safescape-laravel.git](https://github.com/kenji0011/berong-safescape-laravel.git)
+  - **Research Manuscript**: Google Drive link
+  - **Demo Videos**: Google Drive video walkthrough link
+
+---
 
 ## Project Structure
 
 ```text
 berong-safescape/
-├── .nojekyll              <-- Ensures GitHub Pages doesn't ignore assets
-├── index.html             <-- Main website markup with all sections
+├── .nojekyll              <-- Ensures GitHub Pages doesn't ignore static assets
+├── index.html             <-- Main showcase website (Figtree font, SafeScape Fire theme)
+├── README.md              <-- Repository documentation & defense checklist
 ├── assets/
 │   ├── css/
-│   │   └── style.css      <-- Modern, responsive styling
+│   │   └── style.css      <-- Responsive styling, zigzag layout, and lightbox modal
 │   ├── js/
-│   │   └── main.js        <-- Mobile menu & scroll behaviors
+│   │   └── main.js        <-- Mobile navigation & interactive click-to-zoom lightbox
 │   └── img/
-│       ├── screenshot1.svg <-- Replace with screenshot1.png
-│       └── screenshot2.svg <-- Replace with screenshot2.png
-└── README.md
+│       ├── berong-logo.webp    <-- Official BFP Berong logo
+│       ├── berong_mascot.png   <-- Berong mascot artwork
+│       ├── login_berong.png    <-- Feature 1: Authentication screen
+│       ├── kids_berong.png     <-- Feature 2: Kids learning module
+│       ├── adults_berong.png   <-- Feature 3: Adults fire safety module
+│       └── pro_berong.png      <-- Feature 4: Professional compliance module
 ```
 
-## How to Customize
+---
 
-1. **Replace Text & Titles**: Open `index.html` in your editor (e.g., VS Code or Notepad) and update the placeholder names, adviser, problem statements, and links.
-2. **Add Your Screenshots**: Save your real system screenshots into `assets/img/` (for instance `screenshot1.png`) and update the `src` attribute in `index.html`.
-3. **Update URLs**: Update the `href` in the **Links** section with your actual demo URL, repository URL, and manuscript link.
+## Deployment to GitHub Pages
 
-## How to Deploy to GitHub Pages
+1. Open PowerShell in this directory:
+   ```powershell
+   cd "C:\Users\Kean\OneDrive\Desktop\berong-safescape"
+   ```
 
-1. Open your terminal in this directory:
-   ```bash
+2. Initialize Git and commit the project:
+   ```powershell
    git init
    git add .
-   git commit -m "Initial commit of SafeEscape project website"
+   git commit -m "Initial commit: SafeScape V2 research showcase website"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/berong-safescape.git
+   ```
+
+3. Connect to your GitHub repository:
+   ```powershell
+   git remote add origin https://github.com/kenji0011/safescape-showcase.git
    git push -u origin main
    ```
-2. On GitHub, go to your repository **Settings** &rarr; **Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch** &rarr; Branch: `main` &rarr; Folder: `/ (root)`.
-4. Click **Save**. Your site will be published at `https://<your-username>.github.io/berong-safescape/`.
+   *(Replace `safescape-showcase` with your chosen repository name)*
 
+4. Enable GitHub Pages:
+   - On GitHub, navigate to **Settings** &rarr; **Pages**.
+   - Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+   - Choose Branch: `main` and Folder: `/ (root)`.
+   - Click **Save**.
+
+Your showcase site will be live at:
+`https://kenji0011.github.io/safescape-showcase/`
