@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeScape V2 | An AI-Driven Responsive Web Portal For Fire Safety Information Dissemination</title>
+
+  <!-- SEO & Social Open Graph Tags -->
+  <meta name="description" content="SafeScape V2: An AI-Driven Responsive Web Portal For Fire Safety Information Dissemination. Developed in collaboration with the Bureau of Fire Protection - Sta. Cruz, Laguna.">
+  <meta property="og:title" content="SafeScape V2 | AI-Driven Responsive Web Portal For Fire Safety">
+  <meta property="og:description" content="Undergraduate thesis showcase for SafeScape V2 - BS Computer Science (Intelligent Systems), Laguna State Polytechnic University.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/berong-logo.webp">
+
+  <!-- Google Fonts: Figtree (Official SafeScape Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <!-- SafeScape Fire Theme Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       NAVIGATION BAR
+       ========================================================= -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Berong SafeScape Homepage">
+        <img src="assets/img/berong-logo.webp" alt="Berong Official Logo" class="brand-logo-img">
+        <span>SafeScape</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#team">Team</a>
+        <a href="#problem">Problem</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#features">Features</a>
+        <a href="#links">Links</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         1. RESEARCH TITLE & HERO
+         ========================================================= -->
+    <section class="hero" id="about">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="hero-kicker">Undergraduate thesis, BS Computer Science (Intelligent Systems), Laguna State Polytechnic University</p>
+          <h1>SafeScape V2</h1>
+          <p class="hero-title">
+            An AI-driven Responsive Web Portal For Fire Safety Information Dissemination
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://bfpscberong.app" target="_blank" rel="noopener">Open the live demo</a>
+            <a class="btn btn-ghost" href="https://github.com/kenji0011/berong-safescape-laravel.git" target="_blank" rel="noopener">View the repository</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. TEAM MEMBERS AND ADVISER
+         ========================================================= -->
+    <section class="section tint" id="team">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Research Team & Adviser</h2>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="person-card">
+            <h3>Justin Angelo A. Luzande</h3>
+            <p class="person-role">Researcher</p>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="person-card">
+            <h3>Kean Gabriel E. Salvahan</h3>
+            <p class="person-role">Researcher</p>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="person-card">
+            <h3>Prince Genel R. Umali</h3>
+            <p class="person-role">Researcher</p>
+          </div>
+
+          <!-- Adviser -->
+          <div class="person-card adviser-card">
+            <h3>Mia V. Villarica, DIT</h3>
+            <p class="person-role">Thesis adviser and Associate Dean, College of Computer Studies</p>
+          </div>
+        </div>
+
+        <p class="fine">
+          College of Computer Studies, Laguna State Polytechnic University, Santa Cruz Main Campus, Santa Cruz, Laguna. Submitted November 2026 in partial fulfillment of the Bachelor of Science in Computer Science, major in Intelligent Systems. With thanks to the Bureau of Fire Protection of Sta. Cruz, Laguna and the community members who took part.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. PROBLEM STATEMENT
+         ========================================================= -->
+    <section class="section" id="problem">
+      <div class="wrap narrow-grid">
+        <div>
+          <h2>Problem statement</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The preliminary investigation revealed that the existing Berong SafeScape web portal faces several limitations that hinder its effectiveness as a community-based fire safety information and education platform. These limitations include performance inefficiencies associated with its legacy architecture, delays in the dissemination of fire safety information, limited accessibility for vulnerable populations and young learners, inadequate mechanisms for personalized fire safety education, and the absence of comprehensive administrative tools for monitoring and managing community engagement. As a result, the platform is unable to sustain continuous, accessible, and responsive fire safety information dissemination and educational support.
+          </p>
+          <p>
+            In response to these identified gaps, this study seeks to design, develop, and evaluate an enhanced <strong>SafeScape V2</strong> platform. Specifically, it aims to answer the following research questions:
+          </p>
+          <ol class="questions">
+            <li>How can the existing Berong SafeScape Web Portal be restructured and migrated to an optimized PHP Laravel architecture to support system performance, scalability, security, maintainability, and alignment with relevant Department of Information and Communications Technology (DICT) Government Web Hosting Service (GWHS) requirements?</li>
+            <li>How can a Retrieval-Augmented Generation (RAG)-based chatbot powered by the Gemini API and grounded in BFP knowledge resources be developed, integrated, and evaluated in terms of Response Accuracy, Contextual Relevance, Response Completeness, Knowledge Retrieval Effectiveness, and Hallucination/Error Rate for automated fire safety information dissemination?</li>
+            <li>How can a voice-enabled accessibility framework incorporating Web Speech API-based Speech-to-Text (STT) and Text-to-Speech (TTS), age-appropriate educational content, and user-centered UI/UX design be developed and evaluated in terms of usability, accessibility, ease of interaction, and user engagement among diverse user groups?</li>
+            <li>How can an intelligent administrative dashboard and adaptive learning engine be developed to monitor user engagement and assessment performance, provide feedback analytics, and determine appropriate difficulty levels for module quizzes and the final examination based on learner profile and assessment performance?</li>
+            <li>What is the level of evaluation of the developed Berong SafeScape Web Portal in terms of Functional Suitability, Performance Efficiency, Reliability, Security, Maintainability, and Flexibility based on selected characteristics of ISO/IEC 25010:2023 as assessed by Information Technology experts; factual accuracy, contextual relevance, completeness, and operational appropriateness of the fire safety information and AI-assisted functions as assessed by Bureau of Fire Protection personnel; and usability, accessibility, ease of interaction, and overall acceptability as assessed by community end-users?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. OBJECTIVES
+         ========================================================= -->
+    <section class="section tint" id="objectives">
+      <div class="wrap narrow-grid">
+        <div>
+          <h2>Objectives</h2>
+        </div>
+        <div class="prose">
+          <p>
+            <strong>General objective.</strong> The primary objective of this study is to design, develop, and evaluate an enhanced Berong SafeScape Web Portal for the Bureau of Fire Protection - Sta. Cruz, Laguna using an optimized PHP Laravel architecture integrated with artificial intelligence and voice-enabled accessibility technologies to provide an accessible, intelligent, secure, and user-centered fire safety education platform.
+          </p>
+          <p><strong>Specific objectives.</strong></p>
+          <ul class="objectives">
+            <li>
+              <span>Backend Modernization &amp; Architecture:</span> To develop and implement an enhanced Berong SafeScape Web Portal by restructuring and migrating the existing portal to an optimized PHP Laravel architecture using a phased conversion approach, and to evaluate the resulting system in terms of performance, scalability, security, maintainability, and alignment with relevant DICT Government Web Hosting Service (GWHS) requirements.
+            </li>
+            <li>
+              <span>RAG-Grounded AI Knowledge Dissemination:</span> To develop, integrate, and evaluate a Retrieval-Augmented Generation (RAG)-based chatbot powered by the Gemini API and grounded in BFP knowledge resources in terms of Response Accuracy, Contextual Relevance, Response Completeness, Knowledge Retrieval Effectiveness, and Hallucination/Error Rate for automated fire safety information dissemination.
+            </li>
+            <li>
+              <span>Voice Accessibility &amp; User-Centered UI/UX:</span> To design, implement, and evaluate a voice-enabled accessibility framework incorporating Web Speech API-based Speech-to-Text (STT) and Text-to-Speech (TTS), age-appropriate educational content, and user-centered UI/UX design in terms of usability, accessibility, ease of interaction, and user engagement among diverse user groups.
+            </li>
+            <li>
+              <span>Adaptive Learning Engine &amp; Admin Analytics:</span> To develop an intelligent administrative dashboard with user engagement and assessment analytics and an adaptive learning engine using Random Forest classification to determine appropriate Easy, Medium, or Hard difficulty levels for module quizzes and the final examination based on learner profile and assessment performance.
+            </li>
+            <li>
+              <span>Tri-Partite Software Quality &amp; Domain Evaluation:</span> To evaluate the developed Berong SafeScape Web Portal in terms of Functional Suitability, Performance Efficiency, Reliability, Security, Maintainability, and Flexibility based on selected characteristics of ISO/IEC 25010:2023 as assessed by Information Technology experts; to validate the factual accuracy, contextual relevance, completeness, and operational appropriateness of the system’s fire safety information and AI-assisted functions through Bureau of Fire Protection personnel; and to determine the usability, accessibility, ease of interaction, and overall acceptability of the system as assessed by community end-users.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. METHODOLOGY
+         ========================================================= -->
+    <section class="section" id="methodology">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Methodology</h2>
+          <p class="section-sub">
+            The study employs a Developmental Research Design (R&amp;D) guided by the Design Science Research Methodology (DSRM) and an Agile Iterative and Incremental Development Model across six cyclical engineering phases, validated through rigorous internal diagnostics and tri-partite stakeholder evaluation.
+          </p>
+        </div>
+
+        <div class="methodology-steps">
+          <!-- Phase 1 -->
+          <div class="card step-card">
+            <div class="step-num">01</div>
+            <h3>Requirements Analysis</h3>
+            <p>
+              Defined technical prerequisites for migrating legacy infrastructure to an optimized PHP Laravel 11 architecture. Formulated DICT GWHS compliance benchmarks and curated the 500-record BFP fire safety knowledge base for RAG pipeline indexing.
+            </p>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="card step-card">
+            <div class="step-num">02</div>
+            <h3>System &amp; UI/UX Design</h3>
+            <p>
+              Architected Model-View-Controller (MVC) routing blueprints, normalized relational schemas (PostgreSQL), and dense vector embedding stores. Designed accessible, high-contrast, child-friendly user interfaces in consultation with BFP personnel.
+            </p>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="card step-card">
+            <div class="step-num">03</div>
+            <h3>Full-Stack Development</h3>
+            <p>
+              Engineered the core PHP Laravel backend with caching and database indexing. Integrated the Web Speech API to provide native Speech-to-Text (STT) and Text-to-Speech (TTS) capabilities alongside the centralized administrative dashboard.
+            </p>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="card step-card">
+            <div class="step-num">04</div>
+            <h3>AI &amp; Service Integration</h3>
+            <p>
+              Connected the cloud-based Google Gemini API to dense vector retrieval (<em>all-MiniLM-L6-v2</em>) for context-grounded fire responses. Deployed dual Scikit-Learn Random Forest classifiers for dynamic quiz and final examination difficulty prediction.
+            </p>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="card step-card">
+            <div class="step-num">05</div>
+            <h3>Internal Testing &amp; Verification</h3>
+            <p>
+              Executed 85 researcher-led binary test verification cases (100% pass rate) spanning functional, security, accessibility, and AI retrieval tests. Conducted load and stress testing to ensure responsive database querying under high concurrency.
+            </p>
+          </div>
+
+          <!-- Phase 6 -->
+          <div class="card step-card">
+            <div class="step-num">06</div>
+            <h3>Deployment &amp; Evaluation</h3>
+            <p>
+              Deployed the production-ready portal for comprehensive quantitative evaluation involving 75 stakeholders: 10 IT experts on ISO/IEC 25010:2023, 15 BFP personnel for operational/domain validation, and 50 community end-users for usability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stakeholder Evaluation Breakdown Grid -->
+        <div class="methodology-eval-grid">
+          <div class="eval-card">
+            <span class="eval-tag">Quality Benchmark</span>
+            <h4>10 IT Experts</h4>
+            <p>Evaluated software product quality under ISO/IEC 25010:2023 across Functional Suitability, Performance Efficiency, Reliability, Security, Maintainability, and Flexibility.</p>
+          </div>
+
+          <div class="eval-card">
+            <span class="eval-tag">Domain Validation</span>
+            <h4>15 BFP Personnel</h4>
+            <p>Validated factual accuracy, contextual relevance, response completeness, operational appropriateness, and domain safety compliance of AI-assisted outputs.</p>
+          </div>
+
+          <div class="eval-card">
+            <span class="eval-tag">Community Usability</span>
+            <h4>50 End-Users</h4>
+            <p>Assessed platform usability, accessibility, ease of interaction, voice control responsiveness, and overall community acceptability across diverse demographics.</p>
+          </div>
+
+          <div class="eval-card">
+            <span class="eval-tag">Internal Verification</span>
+            <h4>85 Test Cases (100%)</h4>
+            <p>Developer-conducted diagnostic verification tool testing authentication, RBAC, RAG hallucination prevention, adaptive difficulty routing, and API error recovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. SYSTEM FEATURES AND SCREENSHOTS
+         ========================================================= -->
+    <section class="section tint" id="features">
+      <div class="wrap">
+        <div class="section-head">
+         
+          <h2>System Features & Screenshots</h2>
+        </div>
+
+        <div class="features-list">
+          <!-- Feature 1: Login (Text Left, Image Right) -->
+          <article class="feature-item">
+            <div class="feature-text">
+              
+              <h3>Secure Authentication &amp; Multi-Role Onboarding</h3>
+              <p>
+                Provides a secure gateway for citizens, students, and station administrators with role-based access control (RBAC). Aligned with DICT Government Web Hosting Service (GWHS) requirements for user data privacy and session integrity.
+              </p>
+              <ul class="feature-bullets">
+                <li>Role-based access routing for Citizens, Students, and BFP Administrators</li>
+                <li>Encrypted credential handling, session validation, and CSRF protection</li>
+                <li>Clean, accessible onboarding interface optimized across desktop and mobile browsers</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-url">bfpscberong.app/login</span>
+              </div>
+              <img src="assets/img/login_berong.png" alt="SafeScape V2 Login and Authentication Screen" loading="lazy">
+              <span class="img-caption">
+                <span>Figure 1.0: SafeScape V2 Secure Authentication &amp; Portal Login</span>
+                <span class="zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Click to zoom
+                </span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Feature 2: Kids Module (Image Left, Text Right -> Zigzag) -->
+          <article class="feature-item reverse">
+            <div class="feature-text">
+             
+              <h3>Gamified Kids Learning Hub &amp; Mascot Drills</h3>
+              <p>
+                Engages young learners through interactive fire safety lessons led by Berong the mascot. Combines high-contrast, child-friendly visuals, interactive mini-games like <em>Smoke Crawl</em>, and collectible achievement badges to reinforce life-saving emergency habits.
+              </p>
+              <ul class="feature-bullets">
+                <li>Child-friendly storytelling and mascot-guided interactive lessons</li>
+                <li>Hands-on evacuation drills including <em>Smoke Crawl</em> and hazard identification</li>
+                <li>Gamified achievement badge gallery and downloadable completion certificates</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-url">bfpscberong.app/kids</span>
+              </div>
+              <img src="assets/img/kids_berong.png" alt="SafeScape V2 Kids Learning Hub and Challenges" loading="lazy">
+              <span class="img-caption">
+                <span>Figure 2.0: Interactive Kids Fire Safety Learning Hub &amp; Challenges</span>
+                <span class="zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Click to zoom
+                </span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Feature 3: Adults Module (Text Left, Image Right -> Zigzag) -->
+          <article class="feature-item">
+            <div class="feature-text">
+              
+              <h3>Comprehensive Fire Prevention &amp; Household Protocols</h3>
+              <p>
+                Tailored for household members, parents, and community residents. Covers home fire safety inspections, electrical hazard mitigation, LPG handling protocols, and emergency evacuation planning, backed by the AI-driven RAG knowledge assistant.
+              </p>
+              <ul class="feature-bullets">
+                <li>Structured modules on residential fire hazards, electrical safety, and gas handling</li>
+                <li>Step-by-step emergency action plans and local BFP evacuation route guides</li>
+                <li>Integrated AI assistant answering real-time community fire safety inquiries</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-url">bfpscberong.app/adults</span>
+              </div>
+              <img src="assets/img/adults_berong.png" alt="SafeScape V2 Adults Fire Safety and Household Protocols" loading="lazy">
+              <span class="img-caption">
+                <span>Figure 3.0: Adults Fire Prevention &amp; Community Emergency Preparedness</span>
+                <span class="zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Click to zoom
+                </span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Feature 4: Pro Module (Image Left, Text Right -> Zigzag) -->
+          <article class="feature-item reverse">
+            <div class="feature-text">
+              
+              <h3>Professional Fire Safety Compliance &amp; Adaptive Assessment</h3>
+              <p>
+                Designed for workplace safety officers, educators, and community leaders. Features in-depth fire code compliance standards (RA 9514), workplace hazard analysis, and dynamic assessment difficulty powered by the Random Forest adaptive learning engine.
+              </p>
+              <ul class="feature-bullets">
+                <li>Advanced curriculum covering the Fire Code of the Philippines (RA 9514)</li>
+                <li>Random Forest machine learning difficulty adaptation (Easy, Medium, Hard)</li>
+                <li>Formal assessment evaluation, performance metrics, and verified certifications</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-url">bfpscberong.app/professionals</span>
+              </div>
+              <img src="assets/img/pro_berong.png" alt="SafeScape V2 Professional Fire Safety and Adaptive Assessment" loading="lazy">
+              <span class="img-caption">
+                <span>Figure 4.0: Professional Fire Safety Training &amp; Adaptive Assessment</span>
+                <span class="zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Click to zoom
+                </span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. LINKS (REPOSITORY, SYSTEM, DEMO)
+         ========================================================= -->
+    <section class="section" id="links">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Project Links</h2>
+          <p class="section-sub">
+            Direct access to the deployed application, source code repository, thesis manuscript, and demonstration videos.
+          </p>
+        </div>
+
+        <div class="links-grid">
+          <!-- Live Demo Link -->
+          <a class="card link-card" href="https://bfpscberong.app" target="_blank" rel="noopener">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"/></svg>
+            </div>
+            <h3>Live Application</h3>
+            <p>Access the deployed web system and experience the interactive modules directly.</p>
+            <span class="arrow-link">Open Application &rarr;</span>
+          </a>
+
+          <!-- GitHub Repo Link -->
+          <a class="card link-card" href="https://github.com/kenji0011/berong-safescape-laravel.git" target="_blank" rel="noopener">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Source Code Repository</h3>
+            <p>Inspect the Laravel 11 backend, React components, and AI microservice codebase.</p>
+            <span class="arrow-link">View on GitHub &rarr;</span>
+          </a>
+
+          <!-- Manuscript / Docs -->
+          <a class="card link-card" href="https://drive.google.com/or-document-link" target="_blank" rel="noopener">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Research Manuscript</h3>
+            <p>View the complete capstone documentation, testing results, and ISO 25010 evaluations.</p>
+            <span class="arrow-link">Read Manuscript &rarr;</span>
+          </a>
+
+          <!-- Demo Videos Link (Google Drive) -->
+          <a class="card link-card" href="https://drive.google.com/drive/folders/1Tq0PrjT9uI6AmyaltRdBYKkTBhOARB4u?usp=sharing" target="_blank" rel="noopener">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            </div>
+            <h3>Demo Videos</h3>
+            <p>Watch recorded system walkthroughs, AI assistant interaction, and fire drill simulation recordings on Google Drive.</p>
+            <span class="arrow-link">Watch on Google Drive &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>SafeScape V2</strong></p>
+      <p class="footer-sub">Published via GitHub Pages &bull; BS Computer Science Research</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       IMAGE LIGHTBOX MODAL
+       ========================================================= -->
+  <div id="imageLightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Preview">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img class="lightbox-img" src="" alt="Enlarged screenshot preview">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
