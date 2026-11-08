@@ -1,25 +1,58 @@
-// Simple, lightweight interactivity for the GitHub Pages site
+// SafeScape V2 Showcase - Interactive Scripts & Animations
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
+  // 1. Mobile Nav Toggle & Animated Hamburger Menu
   const toggleBtn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
 
   if (toggleBtn && nav) {
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      const isExpanded = nav.classList.contains('open');
-      toggleBtn.setAttribute('aria-expanded', isExpanded);
+    const closeMenu = () => {
+      nav.classList.remove('open');
+      toggleBtn.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = nav.classList.toggle('open');
+      toggleBtn.classList.toggle('open', isOpen);
+      toggleBtn.setAttribute('aria-expanded', isOpen);
     });
 
     // Close menu when clicking any nav link on mobile
     nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside of header
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu();
+      }
     });
   }
 
-  // Active Link Highlight on Scroll
+  // 2. Sticky Header Elevation on Scroll
+  const header = document.querySelector('.site-header');
+  const updateHeaderScroll = () => {
+    if (header) {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  };
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
+
+  // 3. Active Link Highlight on Scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 
@@ -38,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
       const href = link.getAttribute('href').replace('#', '');
       if (href === currentId) {
-        link.style.color = 'var(--text-main)';
+        link.style.color = 'var(--primary)';
         link.style.fontWeight = '700';
       } else if (!link.classList.contains('nav-btn')) {
         link.style.color = '';
@@ -47,7 +80,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { passive: true });
 
-  // Image Lightbox Zoom Functionality
+  // 4. Scroll Reveal Animations (IntersectionObserver)
+  const revealTargets = document.querySelectorAll(
+    '.section-head, .narrow-grid > div:first-child, .person-card, .step-card, .eval-card, .phase-card, .feature-item, .link-card, .note, .phase-detail-header'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08
+    });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal-init');
+
+      // Stagger child cards inside grids for editorial cascade effect
+      const parent = el.parentElement;
+      if (parent && (
+        parent.classList.contains('team-grid') || 
+        parent.classList.contains('methodology-steps') || 
+        parent.classList.contains('methodology-eval-grid') || 
+        parent.classList.contains('phase-grid') || 
+        parent.classList.contains('links-grid')
+      )) {
+        const index = Array.from(parent.children).indexOf(el);
+        if (index >= 0) {
+          el.style.transitionDelay = `${(index % 4) * 85}ms`;
+        }
+      }
+
+      observer.observe(el);
+    });
+  } else {
+    // Graceful fallback for legacy environments
+    revealTargets.forEach(el => el.classList.add('reveal-visible'));
+  }
+
+  // 5. Image Lightbox Zoom Functionality
   const lightboxModal = document.getElementById('imageLightbox');
   const lightboxImg = lightboxModal ? lightboxModal.querySelector('.lightbox-img') : null;
   const lightboxCaption = lightboxModal ? lightboxModal.querySelector('.lightbox-caption') : null;
@@ -113,4 +190,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
