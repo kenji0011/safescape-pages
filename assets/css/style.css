@@ -188,6 +188,7 @@ body {
 .brand span {
   background: linear-gradient(135deg, #b91c1c, #ea580c);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
