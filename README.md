@@ -24,7 +24,7 @@ Submitted in partial fulfillment of the requirements for the degree of **Bachelo
 - [x] **Project Links**:
   - **Live Application**: [https://bfpscberong.app](https://bfpscberong.app)
   - **Source Code Repository**: [https://github.com/kenji0011/berong-safescape-laravel.git](https://github.com/kenji0011/berong-safescape-laravel.git)
-  - **Research Manuscript**: Direct PDF [`docs/FINAL-MANUSCRIPT-V4.pdf`](./docs/FINAL-MANUSCRIPT-V4.pdf)
+  - **Research Manuscript**: [Google Drive Folder](https://drive.google.com/drive/folders/1ldrw0QtJIFAeWkdrH0KKv0mZM90QioNM?usp=sharing)
   - **Demo Videos**: [Google Drive Folder](https://drive.google.com/drive/folders/1Tq0PrjT9uI6AmyaltRdBYKkTBhOARB4u?usp=sharing)
 - [x] **Repository Sharing**: Configured for institutional collaboration with the CCS department account **`teamccs-git`**.
 
