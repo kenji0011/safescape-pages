@@ -18,9 +18,9 @@ Submitted in partial fulfillment of the requirements for the degree of **Bachelo
 - [x] **Methodology**: Developmental Research Design (R&D) guided by Design Science Research Methodology (DSRM) and an Agile 6-phase Iterative & Incremental Development Model, validated by 75 external evaluators (10 IT Experts on ISO/IEC 25010:2023, 15 BFP Personnel, 50 Community End-Users) and 85 researcher test cases (100% pass rate).
 - [x] **System Features & Screenshots**: 4 high-resolution screenshots in zigzag order with an interactive click-to-zoom lightbox modal:
   1. `login_berong.png` — Secure Authentication & Multi-Role Onboarding
-  2. `kids_berong.png` — Gamified Kids Learning Hub & Mascot Drills
-  3. `adults_berong.png` — Comprehensive Fire Prevention & Household Protocols
-  4. `pro_berong.png` — Professional Fire Safety Compliance & Adaptive Assessment
+  2. `kids_berong.png` — Gamified Kids Learning Hub, Drills & Badge Hall
+  3. `adults_berong.png` — Adults Fire Safety Articles, Simulations & Video Library
+  4. `pro_berong.png` — BFP Professional Training & Emergency Dispatch Simulator
 - [x] **Project Links**:
   - **Live Application**: [https://bfpscberong.app](https://bfpscberong.app)
   - **Source Code Repository**: [https://github.com/kenji0011/berong-safescape-laravel.git](https://github.com/kenji0011/berong-safescape-laravel.git)
